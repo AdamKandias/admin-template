@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- Bootstrap Css -->
+	<link rel="stylesheet" href="assets/css/bootstrap.min.css">
+	<!-- Main Css (header, sidebar, navbar) -->
+	<link rel="stylesheet" href="assets/css/main.css">
+	<!-- Css for this page -->
+	<link rel="stylesheet" href="assets/css/petugas-dashboard.css">
+	<!-- Iconscout Css -->
+	<link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+	<title>Petugas Dashboard</title>
+</head>
+
+<body>
+	<nav>
+		<div class="logo-name">
+			<div class="logo-image">
+				<img src="assets/img/logo.png" alt="logo">
+			</div>
+
+			<span class="logo-text">PPDB SMK 17 AGUSTUS 1945
+				CLURING</span>
+		</div>
+
+		<div class="menu-items">
+			<ul class="nav-links">
+				<li><a href="admin-dashboard.html">
+						<i class="uil uil-estate"></i>
+						<span class="link-name">Dahsboard</span>
+					</a></li>
+				<li><a href="#" class="ppdb-btn active">
+						<i class="uil uil-user-plus"></i>
+						<span class="link-name">PPDB 2023 <i class="uil uil-angle-right"></i></span>
+					</a>
+					<ul class="ppdb-show show">
+						<li><a href="petugas-dashboard.html" class="active">
+								<i class="uil uil-user-square"></i>
+								<span class="link-name">Data Peserta</span>
+							</a></li>
+						<li><a href="#">
+								<i class="uil uil-envelope-alt"></i>
+								<span class="link-name">Pesan Masuk</span>
+							</a></li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+	</nav>
+
+	<section class="wrapper">
+		<div class="top">
+			<i class="uil uil-bars sidebar-toggle"></i>
+
+			<div class="user">
+				<div class="user-img">
+					<img src="assets/img/avatar1.png" alt="">
+				</div>
+				<div class="user-info">
+					<p>Sumbul Dwi<br><span>Petugas 1</span></p>
+				</div>
+			</div>
+
+			<a href="#" class="logout-btn"><button>Logout</button></a>
+		</div>
+
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item active"><a href="admin-dashboard.html">PPDB 2023</a></li>
+        </ol>
+
+		<div class="dashboard-content">
+			<div class="boxes">
+				<div class="box">
+					<i class="uil uil-user-plus"></i>
+					<span class="text">Pendaftar</span>
+					<span class="number">250</span>
+				</div>
+				<div class="box">
+					<i class="uil uil-user-check"></i>
+					<span class="text">Terverifikasi</span>
+					<span class="number">90</span>
+				</div>
+			</div>
+
+			<div class="table-responsive">
+				<table class="table mt-5 table-bordered table-striped table-hover table-responsive shadow">
+					<thead>
+						<tr style="background-color: #D9D9D9;">
+							<th>Jadwal PPDB 2023</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>Gelombang 1 <span class="ms-5"> : </span> <span class="fw-semibold ms-2">1 Januari
+									2023</span></td>
+						</tr>
+						<tr>
+							<td>Gelombang 2 <span class="ms-5"> : </span> <span class="fw-semibold ms-2">1 April
+									2023</span></td>
+						</tr>
+						<tr>
+							<td>Gelombang 3 <span class="ms-5"> : </span> <span class="fw-semibold ms-2">1 Juni
+									2023</span></td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+
+			<button type="button" class="btn mt-5 text-white rounded-pill px-5" style="background-color: #B72626;">
+				Gelombang 1
+			</button>
+
+			<div class="table-responsive">
+				<table class="table mt-4 mb-5 table-bordered table-striped table-hover table-responsive shadow">
+					<thead>
+						<tr style="background-color: #D9D9D9;">
+							<th colspan="2">INFORMASI PENERIMAAN PESERTA DIDIK BARU</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>Tahun Pelajaran Aktif : <span class="fw-semibold">Genap</span></td>
+							<td>Tahun PPDB : <span class="fw-semibold">2023</span></td>
+						</tr>
+						<tr>
+							<td>Gelombang Pendaftaran : <span class="fw-semibold">Genap</span></td>
+							<td>Status PPDB : <span class="fw-semibold">Dibuka</span></td>
+						</tr>
+						<tr>
+							<td>Tanggal Mulai Pendaftaran : <span class="fw-semibold">01 / 01 / 2023</span></td>
+							<td>Tanggal Selesai Pendaftaran : <span class="fw-semibold">21 / 07 / 2023</span></td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</section>
+
+	<!-- Main Js (header, sidebar, navbar Toggle) -->
+	<script src="assets/js/main.js"></script>
+</body>
+
+</html>

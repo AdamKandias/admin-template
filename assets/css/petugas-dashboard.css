@@ -1,0 +1,51 @@
+.dashboard-content .boxes {
+    gap: 1.35rem;
+    margin-top: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    flex-wrap: wrap;
+}
+
+.dashboard-content .boxes .box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 12px;
+    width: calc(100% / 3 - 15px);
+    padding: 15px 20px;
+    background-color: white;
+    box-shadow: 0px 0px 9px rgba(0, 0, 0, 0.25);
+    transition: all 0.5s ease;
+}
+
+.boxes .box i {
+    font-size: 35px;
+    color: black;
+}
+
+.boxes .box .text {
+    white-space: nowrap;
+    font-size: 18px;
+    font-weight: 500;
+    color: #8E8787;
+}
+
+.boxes .box .number {
+    font-size: 40px;
+    font-weight: 500;
+    color: black;
+}
+
+@media (max-width: 780px) {
+    .dashboard-content .boxes .box {
+        width: calc(100% / 2 - 15px);
+        margin-top: 15px;
+    }
+}
+
+@media (max-width: 560px) {
+    .dashboard-content .boxes .box {
+        width: 100%;
+    }
+}

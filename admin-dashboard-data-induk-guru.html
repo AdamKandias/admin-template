@@ -1,0 +1,673 @@
+<!-- Halaman Tambah Dan Edit Artikel -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap Css -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <!-- Main Css (header, sidebar, navbar) -->
+    <link rel="stylesheet" href="assets/css/main.css">
+    <!-- Css for this page -->
+    <link rel="stylesheet" href="assets/css/admin-dashboard-artikel.css">
+    <!-- Iconscout Css -->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+    <title>Admin Dashboard Guru</title>
+</head>
+
+<body>
+    <nav>
+        <div class="logo-name">
+            <div class="logo-image">
+                <img src="assets/img/logo.png" alt="logo">
+            </div>
+
+            <span class="logo-text">PPDB SMK 17 AGUSTUS 1945
+                CLURING</span>
+        </div>
+
+        <div class="menu-items">
+            <ul class="nav-links">
+                <li><a href="admin-dashboard.html">
+                        <i class="uil uil-estate"></i>
+                        <span class="link-name">Dahsboard</span>
+                    </a></li>
+                <li><a href="#">
+                        <i class="uil uil-server-connection"></i>
+                        <span class="link-name">Lihat Situs</span>
+                    </a></li>
+                <li><a href="#" class="blog-btn">
+                        <i class="uil uil-chart"></i>
+                        <span class="link-name">Blog <i class="uil uil-angle-right"></i></span>
+                    </a>
+                    <ul class="blog-show">
+                        <li><a href="admin-dashboard-artikel.html">
+                                <i class="uil uil-browser"></i>
+                                <span class="link-name">Artikel</i></span>
+                            </a></li>
+                        <li><a href="admin-dashboard-content.html">
+                                <i class="uil uil-document-layout-right"></i>
+                                <span class="link-name">Content Website</span>
+                            </a></li>
+                        <li><a href="#">
+                                <i class="uil uil-hard-hat"></i>
+                                <span class="link-name">Program Keahlian</span>
+                            </a></li>
+                        <li><a href="#">
+                                <i class="uil uil-basketball"></i>
+                                <span class="link-name">Ekstrakurikuler</span>
+                            </a></li>
+                    </ul>
+                </li>
+                <li><a href="#" class="data-btn active">
+                        <i class="uil uil-postcard"></i>
+                        <span class="link-name">Data Induk <i class="uil uil-angle-right"></i></span>
+                    </a>
+                    <ul class="data-show show">
+                        <li><a href="admin-dashboard-data-induk-siswa.html">
+                                <i class="uil uil-graduation-cap"></i>
+                                <span class="link-name">Data Siswa</span>
+                            </a></li>
+                        <li><a href="admin-dashboard-data-induk-guru.html" class="active">
+                                <i class="uil uil-user-nurse"></i>
+                                <span class="link-name">Data Guru</span>
+                            </a></li>
+                    </ul>
+                </li>
+                <li><a href="#" class="ppdb-btn">
+                        <i class="uil uil-user-plus"></i>
+                        <span class="link-name">PPDB 2023 <i class="uil uil-angle-right"></i></span>
+                    </a>
+                    <ul class="ppdb-show">
+                        <li><a href="admin-dashboard-ppdb-pendaftar.html">
+                                <i class="uil uil-user-exclamation"></i>
+                                <span class="link-name">Pendaftar</span>
+                            </a></li>
+                        <li><a href="admin-dashboard-ppdb-pendaftar-diterima.html">
+                                <i class="uil uil-user-check"></i>
+                                <span class="link-name">Pendaftar Diterima</span>
+                            </a></li>
+                        <li><a href="admin-dashboard-ppdb-pesan-masuk.html">
+                                <i class="uil uil-envelope-alt"></i>
+                                <span class="link-name">Pesan Masuk</span>
+                            </a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="wrapper">
+        <div class="top">
+            <i class="uil uil-bars sidebar-toggle"></i>
+
+            <div class="user">
+                <div class="user-img">
+                    <img src="assets/img/avatar1.png" alt="">
+                </div>
+                <div class="user-info">
+                    <p>Minerva McGongal<br><span>Admin</span></p>
+                </div>
+            </div>
+
+            <a href="#" class="logout-btn"><button>Logout</button></a>
+        </div>
+
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="#">Data Induk</a></li>
+            <li class="breadcrumb-item active"><a href="admin-dashboard-data-induk-guru.html">Data Guru</a></li>
+        </ol>
+
+        <h2 class="text-center mt-4">Daftar Guru</h2>
+
+        <div class="card shadow mt-3 mb-5">
+            <div class="card-body">
+                <div
+                    class="d-flex flex-column flex-md-row align-items-center justify-content-center justify-content-md-between">
+                    <form class="row mb-2 mb-md-0 col-md-4 col-12" action="" method="post">
+                        <div>
+                            <input type="text" class="form-control" placeholder="search disini...">
+                        </div>
+                    </form>
+                    <div class="d-flex gap-2 flex-column flex-md-row align-items-center">
+                        <div>
+                            <a href="#"><button class="btn btn-primary btn-sm" type="button" data-bs-toggle="modal"
+                                    data-bs-target="#tambahModal"><i class="uil uil-plus"></i> Tambah Guru</button></a>
+                        </div>
+                        <div>
+                            <select class="form-select form-select-sm col-12">
+                                <option selected>Berdasarkan Mapel</option>
+                                <option>Berdasarkan Kelas</option>
+                                <option>Terbaru</option>
+                            </select>
+                        </div>
+                        <div>
+                            <a href=""><button class="btn btn-tambah btn-sm" type="button"><i class="uil uil-trash"></i>
+                                    Hapus Guru</button></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="table-responsive">
+                    <table
+                        class="table mt-3 table-bordered table-striped table-hover table-sm align-middle text-center">
+                        <thead>
+                            <tr style="background-color: #D9D9D9;">
+                                <th>
+                                    <div>
+                                        <input class="form-check-input" type="checkbox" value=""
+                                            onclick="checkAll(this)">
+                                    </div>
+                                </th>
+                                <th>Nama Lengkap</th>
+                                <th>NIP</th>
+                                <th>Mapel</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <div>
+                                        <input class="form-check-input" type="checkbox" value="">
+                                    </div>
+                                </td>
+                                <td>Monkey D. Luffy</td>
+                                <td>006377320112345678</td>
+                                <td>Matematika</td>
+                                <td>
+                                    <div class="d-flex justify-content-center align-items-center gap-2">
+                                        <a href="#"><button type="button" class="btn btn-sm btn-success"
+                                                data-bs-toggle="modal" data-bs-target="#detailModal"><i
+                                                    class="uil uil-eye"></i></button></a>
+                                        <a class="" href=""><button type="button" class="btn btn-sm btn-warning"><i
+                                                    class="uil uil-edit"></i></button></a>
+                                        <a class="" href=""><button type="button" class="btn btn-sm btn-danger"><i
+                                                    class="uil uil-print"></i></button></a>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div>
+                                        <input class="form-check-input" type="checkbox" value="">
+                                    </div>
+                                </td>
+                                <td>Monkey D. Luffy</td>
+                                <td>006377320112345678</td>
+                                <td>Matematika</td>
+                                <td>
+                                    <div class="d-flex justify-content-center align-items-center gap-2">
+                                        <a href="#"><button type="button" class="btn btn-sm btn-success"
+                                                data-bs-toggle="modal" data-bs-target="#detailModal"><i
+                                                    class="uil uil-eye"></i></button></a>
+                                        <a class="" href=""><button type="button" class="btn btn-sm btn-warning"><i
+                                                    class="uil uil-edit"></i></button></a>
+                                        <a class="" href=""><button type="button" class="btn btn-sm btn-danger"><i
+                                                    class="uil uil-print"></i></button></a>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div>
+                                        <input class="form-check-input" type="checkbox" value="">
+                                    </div>
+                                </td>
+                                <td>Monkey D. Luffy</td>
+                                <td>006377320112345678</td>
+                                <td>Matematika</td>
+                                <td>
+                                    <div class="d-flex justify-content-center align-items-center gap-2">
+                                        <a href="#"><button type="button" class="btn btn-sm btn-success"
+                                                data-bs-toggle="modal" data-bs-target="#detailModal"><i
+                                                    class="uil uil-eye"></i></button></a>
+                                        <a class="" href=""><button type="button" class="btn btn-sm btn-warning"><i
+                                                    class="uil uil-edit"></i></button></a>
+                                        <a class="" href=""><button type="button" class="btn btn-sm btn-danger"><i
+                                                    class="uil uil-print"></i></button></a>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div>
+                                        <input class="form-check-input" type="checkbox" value="">
+                                    </div>
+                                </td>
+                                <td>Monkey D. Luffy</td>
+                                <td>006377320112345678</td>
+                                <td>Matematika</td>
+                                <td>
+                                    <div class="d-flex justify-content-center align-items-center gap-2">
+                                        <a href="#"><button type="button" class="btn btn-sm btn-success"
+                                                data-bs-toggle="modal" data-bs-target="#detailModal"><i
+                                                    class="uil uil-eye"></i></button></a>
+                                        <a class="" href=""><button type="button" class="btn btn-sm btn-warning"><i
+                                                    class="uil uil-edit"></i></button></a>
+                                        <a class="" href=""><button type="button" class="btn btn-sm btn-danger"><i
+                                                    class="uil uil-print"></i></button></a>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div>
+                                        <input class="form-check-input" type="checkbox" value="">
+                                    </div>
+                                </td>
+                                <td>Monkey D. Luffy</td>
+                                <td>006377320112345678</td>
+                                <td>Matematika</td>
+                                <td>
+                                    <div class="d-flex justify-content-center align-items-center gap-2">
+                                        <a href="#"><button type="button" class="btn btn-sm btn-success"
+                                                data-bs-toggle="modal" data-bs-target="#detailModal"><i
+                                                    class="uil uil-eye"></i></button></a>
+                                        <a class="" href=""><button type="button" class="btn btn-sm btn-warning"><i
+                                                    class="uil uil-edit"></i></button></a>
+                                        <a class="" href=""><button type="button" class="btn btn-sm btn-danger"><i
+                                                    class="uil uil-print"></i></button></a>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div>
+                                        <input class="form-check-input" type="checkbox" value="">
+                                    </div>
+                                </td>
+                                <td>Monkey D. Luffy</td>
+                                <td>006377320112345678</td>
+                                <td>Matematika</td>
+                                <td>
+                                    <div class="d-flex justify-content-center align-items-center gap-2">
+                                        <a href="#"><button type="button" class="btn btn-sm btn-success"
+                                                data-bs-toggle="modal" data-bs-target="#detailModal"><i
+                                                    class="uil uil-eye"></i></button></a>
+                                        <a class="" href=""><button type="button" class="btn btn-sm btn-warning"><i
+                                                    class="uil uil-edit"></i></button></a>
+                                        <a class="" href=""><button type="button" class="btn btn-sm btn-danger"><i
+                                                    class="uil uil-print"></i></button></a>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div>
+                                        <input class="form-check-input" type="checkbox" value="">
+                                    </div>
+                                </td>
+                                <td>Monkey D. Luffy</td>
+                                <td>006377320112345678</td>
+                                <td>Matematika</td>
+                                <td>
+                                    <div class="d-flex justify-content-center align-items-center gap-2">
+                                        <a href="#"><button type="button" class="btn btn-sm btn-success"
+                                                data-bs-toggle="modal" data-bs-target="#detailModal"><i
+                                                    class="uil uil-eye"></i></button></a>
+                                        <a class="" href=""><button type="button" class="btn btn-sm btn-warning"><i
+                                                    class="uil uil-edit"></i></button></a>
+                                        <a class="" href=""><button type="button" class="btn btn-sm btn-danger"><i
+                                                    class="uil uil-print"></i></button></a>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div>
+                                        <input class="form-check-input" type="checkbox" value="">
+                                    </div>
+                                </td>
+                                <td>Monkey D. Luffy</td>
+                                <td>006377320112345678</td>
+                                <td>Matematika</td>
+                                <td>
+                                    <div class="d-flex justify-content-center align-items-center gap-2">
+                                        <a href="#"><button type="button" class="btn btn-sm btn-success"
+                                                data-bs-toggle="modal" data-bs-target="#detailModal"><i
+                                                    class="uil uil-eye"></i></button></a>
+                                        <a class="" href=""><button type="button" class="btn btn-sm btn-warning"><i
+                                                    class="uil uil-edit"></i></button></a>
+                                        <a class="" href=""><button type="button" class="btn btn-sm btn-danger"><i
+                                                    class="uil uil-print"></i></button></a>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div>
+                                        <input class="form-check-input" type="checkbox" value="">
+                                    </div>
+                                </td>
+                                <td>Monkey D. Luffy</td>
+                                <td>006377320112345678</td>
+                                <td>Matematika</td>
+                                <td>
+                                    <div class="d-flex justify-content-center align-items-center gap-2">
+                                        <a href="#"><button type="button" class="btn btn-sm btn-success"
+                                                data-bs-toggle="modal" data-bs-target="#detailModal"><i
+                                                    class="uil uil-eye"></i></button></a>
+                                        <a class="" href=""><button type="button" class="btn btn-sm btn-warning"><i
+                                                    class="uil uil-edit"></i></button></a>
+                                        <a class="" href=""><button type="button" class="btn btn-sm btn-danger"><i
+                                                    class="uil uil-print"></i></button></a>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div>
+                                        <input class="form-check-input" type="checkbox" value="">
+                                    </div>
+                                </td>
+                                <td>Monkey D. Luffy</td>
+                                <td>006377320112345678</td>
+                                <td>Matematika</td>
+                                <td>
+                                    <div class="d-flex justify-content-center align-items-center gap-2">
+                                        <a href="#"><button type="button" class="btn btn-sm btn-success"
+                                                data-bs-toggle="modal" data-bs-target="#detailModal"><i
+                                                    class="uil uil-eye"></i></button></a>
+                                        <a class="" href=""><button type="button" class="btn btn-sm btn-warning"><i
+                                                    class="uil uil-edit"></i></button></a>
+                                        <a class="" href=""><button type="button" class="btn btn-sm btn-danger"><i
+                                                    class="uil uil-print"></i></button></a>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div>
+                                        <input class="form-check-input" type="checkbox" value="">
+                                    </div>
+                                </td>
+                                <td>Monkey D. Luffy</td>
+                                <td>006377320112345678</td>
+                                <td>Matematika</td>
+                                <td>
+                                    <div class="d-flex justify-content-center align-items-center gap-2">
+                                        <a href="#"><button type="button" class="btn btn-sm btn-success"
+                                                data-bs-toggle="modal" data-bs-target="#detailModal"><i
+                                                    class="uil uil-eye"></i></button></a>
+                                        <a class="" href=""><button type="button" class="btn btn-sm btn-warning"><i
+                                                    class="uil uil-edit"></i></button></a>
+                                        <a class="" href=""><button type="button" class="btn btn-sm btn-danger"><i
+                                                    class="uil uil-print"></i></button></a>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div>
+                                        <input class="form-check-input" type="checkbox" value="">
+                                    </div>
+                                </td>
+                                <td>Monkey D. Luffy</td>
+                                <td>006377320112345678</td>
+                                <td>Matematika</td>
+                                <td>
+                                    <div class="d-flex justify-content-center align-items-center gap-2">
+                                        <a href="#"><button type="button" class="btn btn-sm btn-success"
+                                                data-bs-toggle="modal" data-bs-target="#detailModal"><i
+                                                    class="uil uil-eye"></i></button></a>
+                                        <a class="" href=""><button type="button" class="btn btn-sm btn-warning"><i
+                                                    class="uil uil-edit"></i></button></a>
+                                        <a class="" href=""><button type="button" class="btn btn-sm btn-danger"><i
+                                                    class="uil uil-print"></i></button></a>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div>
+                                        <input class="form-check-input" type="checkbox" value="">
+                                    </div>
+                                </td>
+                                <td>Monkey D. Luffy</td>
+                                <td>006377320112345678</td>
+                                <td>Matematika</td>
+                                <td>
+                                    <div class="d-flex justify-content-center align-items-center gap-2">
+                                        <a href="#"><button type="button" class="btn btn-sm btn-success"
+                                                data-bs-toggle="modal" data-bs-target="#detailModal"><i
+                                                    class="uil uil-eye"></i></button></a>
+                                        <a class="" href=""><button type="button" class="btn btn-sm btn-warning"><i
+                                                    class="uil uil-edit"></i></button></a>
+                                        <a class="" href=""><button type="button" class="btn btn-sm btn-danger"><i
+                                                    class="uil uil-print"></i></button></a>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div>
+                                        <input class="form-check-input" type="checkbox" value="">
+                                    </div>
+                                </td>
+                                <td>Monkey D. Luffy</td>
+                                <td>006377320112345678</td>
+                                <td>Matematika</td>
+                                <td>
+                                    <div class="d-flex justify-content-center align-items-center gap-2">
+                                        <a href="#"><button type="button" class="btn btn-sm btn-success"
+                                                data-bs-toggle="modal" data-bs-target="#detailModal"><i
+                                                    class="uil uil-eye"></i></button></a>
+                                        <a class="" href=""><button type="button" class="btn btn-sm btn-warning"><i
+                                                    class="uil uil-edit"></i></button></a>
+                                        <a class="" href=""><button type="button" class="btn btn-sm btn-danger"><i
+                                                    class="uil uil-print"></i></button></a>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div>
+                                        <input class="form-check-input" type="checkbox" value="">
+                                    </div>
+                                </td>
+                                <td>Monkey D. Luffy</td>
+                                <td>006377320112345678</td>
+                                <td>Matematika</td>
+                                <td>
+                                    <div class="d-flex justify-content-center align-items-center gap-2">
+                                        <a href="#"><button type="button" class="btn btn-sm btn-success"
+                                                data-bs-toggle="modal" data-bs-target="#detailModal"><i
+                                                    class="uil uil-eye"></i></button></a>
+                                        <a class="" href=""><button type="button" class="btn btn-sm btn-warning"><i
+                                                    class="uil uil-edit"></i></button></a>
+                                        <a class="" href=""><button type="button" class="btn btn-sm btn-danger"><i
+                                                    class="uil uil-print"></i></button></a>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div
+                    class="paginate d-md-flex flex-md-row justify-content-between align-items-center d-flex flex-column gap-2 mt-2 mt-md-0">
+                    <span>Page 1 of 10</span>
+                    <div class="d-flex gap-1 align-items-center">
+                        <span>Data per page</span>
+                        <div>
+                            <select class="form-select form-select-sm col-1">
+                                <option value="1">5</option>
+                                <option value="2">10</option>
+                                <option value="3" selected>15</option>
+                                <option value="3">20</option>
+                            </select>
+                        </div>
+                    </div>
+                    <ul class="pagination pagination-sm justify-content-center">
+                        <li class="page-item disabled">
+                            <a class="page-link">Previous</a>
+                        </li>
+                        <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                        <li class="page-item">
+                            <a class="page-link" href="#">Next</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal Detail -->
+        <div class="modal fade" id="detailModal" tabindex="-1" aria-labelledby="detailModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="card border-0">
+                        <div class="card-header" style="background-color: #B72626;">
+                            <h1 class="modal-title fs-5 text-white ms-0 ms-md-3" id="detailModalLabel">Detail Informasi
+                                Guru</h1>
+                        </div>
+                        <div class="card-body">
+                            <div class="modal-body">
+                                <div class="row mb-3">
+                                    <label for="nama-lengkap" class="col-sm-3 col-form-label">Nama Lengkap</label>
+                                    <div class="col-sm-9">
+                                        <input type="text" class="form-control" id="nama-lengkap" readonly
+                                            value="Monkey D. Luffy">
+                                    </div>
+                                </div>
+                                <div class="row mb-3">
+                                    <label for="nip" class="col-sm-3 col-form-label">NIP</label>
+                                    <div class="col-sm-9">
+                                        <input type="text" class="form-control" id="nip" readonly value="006377320112345678">
+                                    </div>
+                                </div>
+                                <div class="row mb-3">
+                                    <label for="tempat-tanggal-lahir" class="col-sm-3 col-form-label">Tempat / Tgl.
+                                        Lahir</label>
+                                    <div class="col-sm-9">
+                                        <input type="text" class="form-control" id="tempat-tanggal-lahir"
+                                            name="tempat-tanggal-lahir" readonly value="Grand Blue / 05-05-2006">
+                                    </div>
+                                </div>
+                                <div class="row mb-3">
+                                    <label for="alamat" class="col-sm-3 col-form-label">Alamat</label>
+                                    <div class="col-sm-9">
+                                        <textarea name="alamat" class="form-control" id="alamat" rows="5"
+                                            readonly>Wano Village, Banyuwangi, Jawa Timur, Indonesia, Asia Tenggara, Asia, Bumi, Bimasakti Galaxy</textarea>
+                                    </div>
+                                </div>
+                                <div class="row mb-3">
+                                    <label for="nomer-telepon" class="col-sm-3 col-form-label">No. Telepon</label>
+                                    <div class="col-sm-9">
+                                        <input type="text" class="form-control" id="nomer-telepon" name="nomer-telepon"
+                                            readonly value="084837582943">
+                                    </div>
+                                </div>
+                                <div class="row mb-3">
+                                    <label for="jenis-kelamin" class="col-sm-3 col-form-label">Jenis Kelamin</label>
+                                    <div class="col-sm-9">
+                                        <input type="text" class="form-control" id="jenis-kelamin" name="jenis-kelamin"
+                                            readonly value="Laki-laki">
+                                    </div>
+                                </div>
+                                <div class="row mb-3">
+                                    <label for="agama" class="col-sm-3 col-form-label">Agama</label>
+                                    <div class="col-sm-9">
+                                        <input type="text" class="form-control" id="agama" name="agama" readonly
+                                            value="Islam">
+                                    </div>
+                                </div>
+                                <div class="row mb-3">
+                                    <label for="mapel" class="col-sm-3 col-form-label">Mapel</label>
+                                    <div class="col-sm-9">
+                                        <input type="text" class="form-control" id="mapel" name="mapel"
+                                            readonly value="Matematika">
+                                    </div>
+                                </div>
+                                <div class="row mb-3">
+                                    <label for="status" class="col-sm-3 col-form-label">Status</label>
+                                    <div class="col-sm-9">
+                                        <input type="text" class="form-control" id="status" name="status" readonly
+                                            value="Aktif">
+                                    </div>
+                                </div>
+                                <div class="d-flex justify-content-end">
+                                    <button type="button" class="btn text-white" style="background-color: #B72626;"
+                                        data-bs-dismiss="modal">Tutup</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal Tambah -->
+        <div class="modal fade" id="tambahModal" tabindex="-1" aria-labelledby="tambahModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="card border-0">
+                        <div class="card-header" style="background-color: #B72626;">
+                            <h1 class="modal-title fs-5 text-white ms-0 ms-md-3" id="tambahModalLabel">Tambah Data Guru
+                            </h1>
+                        </div>
+                        <div class="card-body">
+                            <div class="modal-body">
+                                <form class="row g-3">
+                                    <div class="col-md-6">
+                                        <label for="nama" class="form-label">Nama Lengkap</label>
+                                        <input type="text" class="form-control" id="nama" name="name">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label for="mapel" class="form-label">Mapel</label>
+                                        <input type="text" class="form-control" id="mapel" name="mapel">
+                                    </div>
+                                    <div class="col-md-3">
+                                        <label for="nip" class="form-label">NIP</label>
+                                        <input type="text" class="form-control" id="nip" name="nip">
+                                    </div>
+                                    <div class="col-md-3">
+                                        <label for="notelp" class="form-label">No. Telepon</label>
+                                        <input type="text" class="form-control" id="notelp" name="nomer-telepon">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label for="alamat" class="form-label">Alamat Lengkap</label>
+                                        <textarea class="form-control" name="alamat" id="alamat" rows="3"></textarea>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <label for="jeniskelamin" class="form-label">Jenis Kelamin</label>
+                                        <select id="jeniskelamin" class="form-select">
+                                            <option selected>Laki-Laki</option>
+                                            <option>Perempuan</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-md-2">
+                                        <label for="agama" class="form-label">Agama</label>
+                                        <input type="text" class="form-control" id="agama" name="agama">
+                                    </div>
+                                    <div class="col-md-4">
+                                        <label for="tempatlahir" class="form-label">Tempat Lahir</label>
+                                        <input type="text" class="form-control" id="tempatlahir" name="tempat-lahir">
+                                    </div>
+                                    <div class="col-md-3">
+                                        <label for="tgl" class="form-label">Tanggal Lahir</label>
+                                        <input type="date" class="form-control" id="tgl" name="tgl">
+                                    </div>
+                                    <div class="col-12 mt-4 d-flex justify-content-between gap-2">
+                                        <button type="button" class="btn text-white" style="background-color: #B72626;"
+                                            data-bs-dismiss="modal">Tutup</button>
+                                        <button type="submit" class="btn btn-primary">Tambah Data</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+
+    <!-- Main Js (header, sidebar, navbar Toggle) -->
+    <script src="assets/js/main.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="assets/js/bootstrap.min.js"></script>
+</body>
+
+</html>

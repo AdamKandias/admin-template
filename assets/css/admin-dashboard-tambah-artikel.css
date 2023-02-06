@@ -1,0 +1,21 @@
+.ck.ck-content:not(.ck-comment__input *) {
+    height: 300px;
+    overflow-y: auto;
+}
+
+.btn-simpan{
+    padding-right: 20px;
+    padding-left: 20px;
+    background-color: #B72626;
+    color: white;
+}
+
+.btn-simpan:hover{
+    background-color: #950101;
+    color: white;
+}
+
+.btn-simpan:focus, .btn-simpan:active{
+    background-color: #950101 !important;
+    color: white !important;
+}

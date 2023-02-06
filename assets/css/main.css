@@ -1,0 +1,476 @@
+@font-face {
+    font-family: "Poppins";
+    src: url("../fonts/Poppins-Regular.ttf");
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+button,
+ul,
+li,
+ol {
+    all: unset;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+body {
+    min-height: 100vh;
+    background-color: #B72626;
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 250px;
+    background-color: #B72626;
+    transition: all 0.5s ease;
+}
+
+nav.close {
+    width: 73px;
+}
+
+nav .logo-name {
+    padding: 10px 14px;
+    display: flex;
+    align-items: center;
+    background-color: white;
+}
+
+nav .logo-image {
+    display: flex;
+    justify-content: center;
+    min-width: 45px;
+}
+
+nav .logo-image img {
+    width: 50px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+nav .logo-name .logo-text {
+    color: #B72626;
+    margin-left: 14px;
+    transition: all 0.5s ease;
+    font-weight: 700;
+    font-size: 14px;
+}
+
+nav.close .logo-text {
+    opacity: 0;
+    pointer-events: none;
+    display: none;
+}
+
+nav .menu-items {
+    padding: 10px 14px;
+    margin-top: 40px;
+    height: calc(100% - 90px);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.menu-items li {
+    list-style: none;
+}
+
+.menu-items li a {
+    display: flex;
+    align-items: center;
+    height: 50px;
+    text-decoration: none;
+    position: relative;
+    transition: all 0.5 ease;
+}
+
+.nav-links li a:hover {
+    background: rgba(255, 149, 81, 0.35);
+    box-shadow: 0px 0px 9px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+}
+
+.nav-links li a.active {
+    background: linear-gradient(267.92deg, rgba(146, 18, 18, 0.85) -29.63%, rgba(183, 38, 38, 0.85) 38.39%, rgba(255, 149, 81, 0.85) 132.49%);
+    box-shadow: 0px 0px 9px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+}
+
+body.dark li a:hover:before {
+    background-color: white;
+}
+
+.menu-items li a i {
+    font-size: 24px;
+    min-width: 45px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+.menu-items li a .link-name {
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    font-weight: 400;
+    color: white;
+    transition: all 0.5s ease;
+}
+
+.menu-items li a .link-name i {
+    position: absolute;
+    right: 0;
+    transition: all 0.5s ease;
+}
+
+.menu-items li a .link-name i.rotate {
+    transform: rotate(90deg);
+}
+
+nav.close li a .link-name {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.nav-links li a:hover i,
+.nav-links li a:hover .link-name {
+    color: white;
+}
+
+body.dark .nav-links li a:hover i,
+body.dark .nav-links li a:hover .link-name {
+    color: white;
+}
+
+/* Sub menu sidebar */
+nav ul .blog-show,
+nav ul .ppdb-show,
+nav ul .data-show {
+    position: absolute;
+    /* display: none; */
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.5s ease;
+}
+
+nav ul .blog-show.show,
+nav ul .ppdb-show.show,
+nav ul .data-show.show {
+    background: linear-gradient(267.63deg, rgba(255, 149, 81, 0.15) -25.08%, rgba(183, 38, 38, 0.15) 50.75%, rgba(255, 149, 81, 0.15) 98.22%);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    display: block;
+    visibility: visible;
+    position: relative;
+    opacity: 1;
+    transition: all 0.5s ease;
+}
+
+.wrapper {
+    position: relative;
+    left: 250px;
+    background-color: white;
+    min-height: 100vh;
+    width: calc(100% - 250px);
+    padding: 10px 14px;
+    transition: all 0.5s ease;
+}
+
+nav.close~.wrapper {
+    left: 73px;
+    width: calc(100% - 73px);
+}
+
+.wrapper .top {
+    position: fixed;
+    top: 0;
+    left: 250px;
+    display: flex;
+    width: calc(100% - 250px);
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 14px;
+    background-color: white;
+    transition: all 0.5s ease;
+    z-index: 10;
+}
+
+nav.close~.wrapper .top {
+    left: 73px;
+    width: calc(100% - 73px);
+}
+
+.wrapper .top .sidebar-toggle {
+    font-size: 26px;
+    color: black;
+    cursor: pointer;
+}
+
+.wrapper .top .user {
+    gap: 7px;
+    display: flex;
+    width: 100%;
+    margin: 0 30px;
+    align-items: center;
+}
+
+.wrapper .top .user .user-img {
+    align-items: center;
+}
+
+.wrapper .top .user .user-info {
+    line-height: 15px;
+    display: flex;
+    align-items: center;
+}
+
+.wrapper .top .user .user-info p {
+    font-weight: 500;
+    padding: 0%;
+    margin: 0%;
+}
+
+.wrapper .top .user .user-info span {
+    font-weight: 600;
+    color: #000000B2;
+    font-size: 12px;
+    line-height: 1px;
+}
+
+.wrapper .top a {
+    cursor: pointer;
+}
+
+.wrapper .top a.logout-btn {
+    font-weight: 600;
+    font-size: small;
+    background-color: white;
+    color: #B72626;
+    padding: 7px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    border: 1px solid #B7AEAE;
+    border-radius: 25px;
+    transition: all 0.5s ease;
+}
+
+.wrapper .top a.logout-btn:hover {
+    transition: 0.3;
+    border: 1px solid #B72626;
+    background-color: #B72626;
+    color: white;
+    box-shadow: 0px 0px 9px rgba(0, 0, 0, 0.25);
+}
+
+.top img {
+    width: 40px;
+    border-radius: 50%;
+}
+
+.wrapper .breadcrumb {
+    margin-top: 60px;
+    height: 60px;
+    background: #950101;
+    margin-left: -14px;
+    margin-right: -14px;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    list-style: none;
+    color: white;
+    padding-left: 2rem;
+}
+
+.breadcrumb-item.active{
+    color: rgba(255, 149, 81);
+}
+
+.wrapper .breadcrumb .breadcrumb-item a:hover {
+    color: #B7AEAE;
+}
+.wrapper .breadcrumb .breadcrumb-item:last-child a:hover {
+    color: rgba(255, 149, 81);
+}
+
+.breadcrumb-item + .breadcrumb-item::before {
+    content: "⮞";
+    color: white;
+}
+
+@media (max-width: 1000px) {
+    nav {
+        width: 73px;
+    }
+
+    nav.close {
+        width: 250px;
+    }
+
+    nav .logo-name {
+        height: 70px;
+    }
+
+    nav.close .logo-name {
+        height: 70px;
+    }
+
+    nav.close .logo-text {
+        opacity: 1;
+        pointer-events: none;
+        display: block;
+    }
+
+    nav.close .logo-text {
+        opacity: 1;
+        pointer-events: auto;
+    }
+
+    nav li a .link-name {
+        opacity: 0;
+        pointer-events: none;
+    }
+
+    nav.close li a .link-name {
+        opacity: 1;
+        pointer-events: auto;
+    }
+
+    .wrapper .top .user .user-info p {
+        font-weight: 700;
+        font-size: 12px;
+    }
+
+    .wrapper .top .user .user-info span {
+        font-weight: 600;
+        color: #000000B2;
+        font-size: 10px;
+        line-height: 1px;
+    }
+
+    .wrapper .breadcrumb .breadcrumb-item{
+        font-size: 14px;
+    }
+
+    nav~.wrapper {
+        left: 73px;
+        width: calc(100% - 73px);
+    }
+
+    nav.close~.wrapper {
+        left: 250px;
+        width: calc(100% - 250px);
+    }
+
+    nav~.wrapper .top {
+        left: 73px;
+        width: calc(100% - 73px);
+    }
+
+    nav.close~.wrapper .top {
+        left: 250px;
+        width: calc(100% - 250px);
+    }
+}
+
+@media (max-width: 600px) {
+    .wrapper .top .user .user-info p {
+        font-weight: bolder;
+        font-size: 9px;
+    }
+    
+    .wrapper .top .user .user-info span {
+        font-weight: 600;
+        color: #000000B2;
+        font-size: 7px;
+    }
+    
+    .wrapper .breadcrumb .breadcrumb-item{
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 400px) {
+    nav {
+        width: 0px;
+    }
+
+    nav.close {
+        width: 73px;
+    }
+
+    nav .logo-text {
+        opacity: 0;
+        pointer-events: none;
+    }
+
+    nav.close .logo-text {
+        opacity: 0;
+        pointer-events: none;
+    }
+
+    nav li a .link-name {
+        opacity: 0;
+        pointer-events: none;
+    }
+
+    nav.close li a .link-name {
+        opacity: 0;
+        pointer-events: none;
+    }
+
+    nav~.wrapper {
+        left: 0;
+        width: 100%;
+    }
+
+    nav.close~.wrapper {
+        left: 73px;
+        width: calc(100% - 73px);
+    }
+
+    nav~.wrapper .top {
+        left: 0;
+        width: 100%;
+    }
+
+    nav.close~.wrapper .top {
+        left: 0;
+        width: 100%;
+    }
+
+    .wrapper .top .user .user-info p {
+        font-weight: 700;
+        font-size: 12px;
+    }
+
+    .wrapper .top .user .user-info span {
+        font-weight: 600;
+        color: #000000B2;
+        font-size: 10px;
+        line-height: 1px;
+    }
+
+    .wrapper .top a.logout-btn {
+        font-size: xx-small;
+        padding: 7px 10px;
+    }
+
+    .wrapper .breadcrumb .breadcrumb-item{
+        font-size: 12px;
+    }
+}

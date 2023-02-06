@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- Bootstrap Css -->
+	<link rel="stylesheet" href="assets/css/bootstrap.min.css">
+	<!-- Main Css (header, sidebar, navbar) -->
+	<link rel="stylesheet" href="assets/css/main.css">
+	<!-- Css for this page -->
+	<link rel="stylesheet" href="assets/css/admin-dashboard.css">
+	<!-- Iconscout Css -->
+	<link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+	<title>Admin Dashboard</title>
+</head>
+
+<body>
+	<nav>
+		<div class="logo-name">
+			<div class="logo-image">
+				<img src="assets/img/logo.png" alt="logo">
+			</div>
+
+			<span class="logo-text">PPDB SMK 17 AGUSTUS 1945
+				CLURING</span>
+		</div>
+
+		<div class="menu-items">
+			<ul class="nav-links">
+				<li><a class="active" href="admin-dashboard.html">
+						<i class="uil uil-estate"></i>
+						<span class="link-name">Dahsboard</span>
+					</a></li>
+				<li><a href="#">
+						<i class="uil uil-server-connection"></i>
+						<span class="link-name">Lihat Situs</span>
+					</a></li>
+				<li><a href="#" class="blog-btn">
+						<i class="uil uil-chart"></i>
+						<span class="link-name">Blog <i class="uil uil-angle-right"></i></span>
+					</a>
+					<ul class="blog-show">
+						<li><a href="admin-dashboard-artikel.html">
+								<i class="uil uil-browser"></i>
+								<span class="link-name">Artikel</i></span>
+							</a></li>
+						<li><a href="admin-dashboard-content.html">
+								<i class="uil uil-document-layout-right"></i>
+								<span class="link-name">Content Website</span>
+							</a></li>
+						<li><a href="#">
+								<i class="uil uil-hard-hat"></i>
+								<span class="link-name">Program Keahlian</span>
+							</a></li>
+						<li><a href="#">
+								<i class="uil uil-basketball"></i>
+								<span class="link-name">Ekstrakurikuler</span>
+							</a></li>
+					</ul>
+				</li>
+				<li><a href="#" class="data-btn">
+						<i class="uil uil-postcard"></i>
+						<span class="link-name">Data Induk <i class="uil uil-angle-right"></i></span>
+					</a>
+					<ul class="data-show">
+						<li><a href="admin-dashboard-data-induk-siswa.html">
+								<i class="uil uil-graduation-cap"></i>
+								<span class="link-name">Data Siswa</span>
+							</a></li>
+						<li><a href="admin-dashboard-data-induk-guru.html">
+								<i class="uil uil-user-nurse"></i>
+								<span class="link-name">Data Guru</span>
+							</a></li>
+					</ul>
+				</li>
+				<li><a href="#" class="ppdb-btn">
+						<i class="uil uil-user-plus"></i>
+						<span class="link-name">PPDB 2023 <i class="uil uil-angle-right"></i></span>
+					</a>
+					<ul class="ppdb-show">
+						<li><a href="admin-dashboard-ppdb-pendaftar.html">
+								<i class="uil uil-user-exclamation"></i>
+								<span class="link-name">Pendaftar</span>
+							</a></li>
+						<li><a href="admin-dashboard-ppdb-pendaftar-diterima.html">
+								<i class="uil uil-user-check"></i>
+								<span class="link-name">Pendaftar Diterima</span>
+							</a></li>
+						<li><a href="admin-dashboard-ppdb-pesan-masuk.html">
+								<i class="uil uil-envelope-alt"></i>
+								<span class="link-name">Pesan Masuk</span>
+							</a></li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+	</nav>
+
+	<section class="wrapper">
+		<div class="top">
+			<i class="uil uil-bars sidebar-toggle"></i>
+
+			<div class="user">
+				<div class="user-img">
+					<img src="assets/img/avatar1.png" alt="">
+				</div>
+				<div class="user-info">
+					<p>Minerva McGongal<br><span>Admin</span></p>
+				</div>
+			</div>
+
+			<a href="#" class="logout-btn"><button>Logout</button></a>
+		</div>
+
+		<ol class="breadcrumb">
+			<li class="breadcrumb-item active"><a href="admin-dashboard.html">Dashboard</a></li>
+		</ol>
+
+		<div class="dashboard-content">
+			<div class="boxes">
+				<div class="box">
+					<i class="uil uil-graduation-cap"></i>
+					<span class="text">Total Siswa</span>
+					<span class="number">6,739</span>
+				</div>
+				<div class="box">
+					<i class="uil uil-user-nurse"></i>
+					<span class="text">Total Guru</span>
+					<span class="number">379</span>
+				</div>
+				<div class="box">
+					<i class="uil uil-user-md	"></i>
+					<span class="text">Total Karyawan</span>
+					<span class="number">87</span>
+				</div>
+			</div>
+
+			<div class="table-responsive">
+				<table class="table mt-5 table-bordered table-striped table-hover shadow">
+					<thead>
+						<tr style="background-color: #D9D9D9;">
+							<th colspan="2">INFORMASI PENERIMAAN PESERTA DIDIK BARU</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>Tahun Pelajaran Aktif : <span class="fw-semibold">Genap</span></td>
+							<td>Tahun PPDB : <span class="fw-semibold">2023</span></td>
+						</tr>
+						<tr>
+							<td>Gelombang Pendaftaran : <span class="fw-semibold">Genap</span></td>
+							<td>Status PPDB : <span class="fw-semibold">Dibuka</span></td>
+						</tr>
+						<tr>
+							<td>Tanggal Mulai Pendaftaran : <span class="fw-semibold">01 / 01 / 2023</span></td>
+							<td>Tanggal Selesai Pendaftaran : <span class="fw-semibold">21 / 07 / 2023</span></td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+
+			<div class="card my-5 shadow">
+				<div class="card-header fw-bold" style="background-color: #D9D9D9;">
+					PROFIL SEKOLAH
+				</div>
+				<div class="table-responsive mx-2 mt-2">
+					<table class="table table-borderless">
+						<tbody>
+							<tr>
+								<th class="col-2">Nama Sekolah :</th>
+								<td>SMK 17 AGUSTUS 1945 CLURING</td>
+							</tr>
+							<tr>
+								<th class="col-2">NPSN :</th>
+								<td>0284729476</td>
+							</tr>
+							<tr>
+								<th class="col-2">Kepala Sekolah :</th>
+								<td>Drs. Stone</td>
+							</tr>
+							<tr>
+								<th class="col-2">Alamat Sekolah :</th>
+								<td>Jl. Lorem, ipsum dolor no.13, Cluring</td>
+							</tr>
+							<tr>
+								<th class="col-2">Kelurahan :</th>
+								<td>Cluring</td>
+							</tr>
+							<tr>
+								<th class="col-2">Kabupaten :</th>
+								<td>Banyuwangi</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Main Js (header, sidebar, navbar Toggle) -->
+	<script src="assets/js/main.js"></script>
+</body>
+
+</html>

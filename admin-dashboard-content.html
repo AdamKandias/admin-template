@@ -1,0 +1,283 @@
+<!-- Halaman Tambah Dan Edit Artikel -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap Css -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <!-- Main Css (header, sidebar, navbar) -->
+    <link rel="stylesheet" href="assets/css/main.css">
+    <!-- Iconscout Css -->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+    <title>Admin Dashboard Content</title>
+</head>
+
+<body>
+    <nav>
+        <div class="logo-name">
+            <div class="logo-image">
+                <img src="assets/img/logo.png" alt="logo">
+            </div>
+
+            <span class="logo-text">PPDB SMK 17 AGUSTUS 1945
+                CLURING</span>
+        </div>
+
+        <div class="menu-items">
+            <ul class="nav-links">
+                <li><a href="admin-dashboard.html">
+                        <i class="uil uil-estate"></i>
+                        <span class="link-name">Dahsboard</span>
+                    </a></li>
+                <li><a href="#">
+                        <i class="uil uil-server-connection"></i>
+                        <span class="link-name">Lihat Situs</span>
+                    </a></li>
+                <li><a href="#" class="blog-btn active">
+                        <i class="uil uil-chart"></i>
+                        <span class="link-name">Blog <i class="uil uil-angle-right"></i></span>
+                    </a>
+                    <ul class="blog-show show">
+                        <li><a href="admin-dashboard-artikel.html">
+                                <i class="uil uil-browser"></i>
+                                <span class="link-name">Artikel</i></span>
+                            </a></li>
+                        <li><a href="admin-dashboard-content.html" class="active">
+                                <i class="uil uil-document-layout-right"></i>
+                                <span class="link-name">Content Website</span>
+                            </a></li>
+                        <li><a href="#">
+                                <i class="uil uil-hard-hat"></i>
+                                <span class="link-name">Program Keahlian</span>
+                            </a></li>
+                        <li><a href="#">
+                                <i class="uil uil-basketball"></i>
+                                <span class="link-name">Ekstrakurikuler</span>
+                            </a></li>
+                    </ul>
+                </li>
+                <li><a href="#" class="data-btn">
+                    <i class="uil uil-postcard"></i>
+                    <span class="link-name">Data Induk <i class="uil uil-angle-right"></i></span>
+                </a>
+                <ul class="data-show">
+                    <li><a href="admin-dashboard-data-induk-siswa.html">
+                            <i class="uil uil-graduation-cap"></i>
+                            <span class="link-name">Data Siswa</span>
+                        </a></li>
+                    <li><a href="admin-dashboard-data-induk-guru.html">
+                            <i class="uil uil-user-nurse"></i>
+                            <span class="link-name">Data Guru</span>
+                        </a></li>
+                </ul>
+            </li>
+                <li><a href="#" class="ppdb-btn">
+                        <i class="uil uil-user-plus"></i>
+                        <span class="link-name">PPDB 2023 <i class="uil uil-angle-right"></i></span>
+                    </a>
+                    <ul class="ppdb-show">
+						<li><a href="admin-dashboard-ppdb-pendaftar.html">
+								<i class="uil uil-user-exclamation"></i>
+								<span class="link-name">Pendaftar</span>
+							</a></li>
+						<li><a href="admin-dashboard-ppdb-pendaftar-diterima.html">
+								<i class="uil uil-user-check"></i>
+								<span class="link-name">Pendaftar Diterima</span>
+							</a></li>
+						<li><a href="admin-dashboard-ppdb-pesan-masuk.html">
+								<i class="uil uil-envelope-alt"></i>
+								<span class="link-name">Pesan Masuk</span>
+							</a></li>
+					</ul>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="wrapper">
+        <div class="top">
+            <i class="uil uil-bars sidebar-toggle"></i>
+
+            <div class="user">
+                <div class="user-img">
+                    <img src="assets/img/avatar1.png" alt="">
+                </div>
+                <div class="user-info">
+                    <p>Minerva McGongal<br><span>Admin</span></p>
+                </div>
+            </div>
+
+            <a href="#" class="logout-btn"><button>Logout</button></a>
+        </div>
+
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="#">Blog</a></li>
+            <li class="breadcrumb-item active"><a href="admin-dashboard-content.html">Content Website</a></li>
+        </ol>
+
+        <div class="dashboard-content">
+            <div class="card shadow my-5">
+                <div class="card-header fw-bold">
+                    <i class="uil uil-building"></i> PROFIL SEKOLAH
+                </div>
+                <div class="table-responsive px-3">
+                    <table class="table mt-3 table-bordered table-align-middle">
+                        <tbody>
+                            <tr>
+                                <th>Nama</th>
+                                <td>SMK 17 AGUSTUS 1945 CLURING</td>
+                            </tr>
+                            <tr>
+                                <th>NPSN</th>
+                                <td>0284729476</td>
+                            </tr>
+                            <tr>
+                                <th>NSS</th>
+                                <td>018592857182</td>
+                            </tr>
+                            <tr>
+                                <th>Akreditasi</th>
+                                <td>Terakreditasi A</td>
+                            </tr>
+                            <tr>
+                                <th>Alamat</th>
+                                <td>Cluring, Banyuwangi, Jawa Timur, Indonesia, Asia Tenggara, Asia, Bumi, Bimasakti
+                                    Galaxy</td>
+                            </tr>
+                            <tr>
+                                <th>Kode Pos</th>
+                                <td>6026538</td>
+                            </tr>
+                            <tr>
+                                <th>No. Telp</th>
+                                <td>0812819382938</td>
+                            </tr>
+                            <tr>
+                                <th>Email</th>
+                                <td>examplemail@gmail.com</td>
+                            </tr>
+                            <tr>
+                                <th>Status</th>
+                                <td>Sekolah Menengah Kejuruan</td>
+                            </tr>
+                            <tr>
+                                <th>Situs</th>
+                                <td>www.exampledomain.com</td>
+                            </tr>
+                            <tr>
+                                <th>Facebook</th>
+                                <td>myaccountfacebook</td>
+                            </tr>
+                            <tr>
+                                <th>Instagram</th>
+                                <td>@myinstagramaccount</td>
+                            </tr>
+                            <tr>
+                                <th>Youtube</th>
+                                <td>OFFICIAL MY YOUTUBE CHANNEL</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="d-flex justify-content-end gap-4 mb-3 px-3">
+                    <button class="btn btn-primary btn-sm"><i class="uil uil-plus"></i></button>
+                    <button class="btn btn-sm border border-secondary"><i class="uil uil-edit"></i></button>
+                    <button class="btn btn-danger btn-sm"><i class="uil uil-trash"></i></button>
+                </div>
+            </div>
+
+            <div class="card shadow my-5">
+                <div class="card-header fw-bold">
+                    <i class="uil uil-game-structure"></i> VISI & MISI
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-12 mb-3">
+                            <label for="visi" class="form-label fw-semibold">Visi</label>
+                            <textarea name="visi" id="visi" rows="5"
+                                class="form-control" readonly>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Animi laborum in voluptatum, cupiditate praesentium aperiam placeat ducimus error magnam ut, atque molestiae quae velit reiciendis, veniam similique ex maiores nemo vitae. Ab, architecto delectus cupiditate natus molestias magnam reiciendis placeat animi! Vel, quibusdam doloribus dolorem et cumque ea doloremque autem.</textarea>
+                        </div>
+                        <div class="col-12">
+                            <label for="misi" class="form-label fw-semibold">Misi</label>
+                            <textarea name="misi" id="misi" rows="8" class="form-control" readonly>1. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed at ante.
+2. Mauris eleifend, quam a vulputate dictum
+3. Massa quam dapibus leo, eget vulputate orci purus ut lorem.
+4. In fringilla mi in ligula. Pellentesque aliquam quam vel dolor. 
+5. Nunc adipiscing. Sed quam odio, tempus ac, aliquam molestie.
+6. Vestibulum ut nulla aliquam risus rutrum interdum. 
+7. Pellentesque lorem. Curabitur sit amet erat quis </textarea>
+                        </div>
+                    </div>
+                </div>
+                <div class="d-flex justify-content-end gap-4 mb-3 px-3">
+                    <button class="btn btn-sm border border-secondary"><i class="uil uil-edit"></i></button>
+                    <button class="btn btn-danger btn-sm"><i class="uil uil-trash"></i></button>
+                </div>
+            </div>
+
+            <div class="card shadow my-5">
+                <div class="card-header fw-bold">
+                    <i class="uil uil-history"></i> SEJARAH SINGKAT
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-12 mb-3">
+                            <textarea name="visi" id="visi" rows="12"
+                                class="form-control" readonly>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Animi laborum in voluptatum, cupiditate praesentium aperiam placeat ducimus error magnam ut, atque molestiae quae velit reiciendis, veniam similique ex maiores nemo vitae. Ab, architecto delectus cupiditate natus molestias magnam reiciendis placeat animi! Vel, quibusdam doloribus dolorem et cumque ea doloremque autem.
+
+Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis quasi nam, consectetur ad mollitia modi harum, nihil culpa vero, labore enim voluptates accusamus sapiente quae corporis voluptatem error impedit numquam soluta ullam atque ipsum voluptatibus. Sunt, dolore doloribus? Saepe, magnam dignissimos cumque nam ducimus odio voluptate delectus in similique nemo sint aut minus officiis nisi velit nobis ratione veniam recusandae, illo blanditiis ipsa maxime! Libero, similique possimus est explicabo ducimus minima praesentium repudiandae? Vitae quidem harum quam ducimus omnis reiciendis!</textarea>
+                        </div>
+                    </div>
+                </div>
+                <div class="d-flex justify-content-end gap-4 mb-3 px-3">
+                    <button class="btn btn-sm border border-secondary"><i class="uil uil-edit"></i></button>
+                    <button class="btn btn-danger btn-sm"><i class="uil uil-trash"></i></button>
+                </div>
+            </div>
+
+            <div class="card shadow my-5">
+                <div class="card-header fw-bold">
+                    <i class="uil uil-user-nurse"></i> SAMBUTAN KEPALA SEKOLAH
+                </div>
+                <div class="card-body">
+                    <div class="table-responsive">
+                        <table class="table m-0 table-bordered table-align-middle">
+                            <tbody>
+                                <tr>
+                                    <th>Kepala Sekolah</th>
+                                    <td class="col-9">Drs. Stone</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="row px-3">
+                    <div class="col-12 mb-3">
+                        <label for="sambutan" class="form-label fw-semibold">Sambutan</label>
+                        <textarea name="sambutan" id="sambutan" rows="12"
+                            class="form-control" readonly>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Animi laborum in voluptatum, cupiditate praesentium aperiam placeat ducimus error magnam ut, atque molestiae quae velit reiciendis, veniam similique ex maiores nemo vitae. Ab, architecto delectus cupiditate natus molestias magnam reiciendis placeat animi! Vel, quibusdam doloribus dolorem et cumque ea doloremque autem:
+
+1. Mauris eleifend, quam a vulputate dictum
+2. Massa quam dapibus leo, eget vulputate orci purus ut lorem.
+3. In fringilla mi in ligula. Pellentesque aliquam quam vel dolor. 
+4. Nunc adipiscing. Sed quam odio, tempus ac, aliquam molestie.
+5. Vestibulum ut nulla aliquam risus rutrum interdum. 
+6. Pellentesque lorem. Curabitur sit amet erat quis </textarea>
+                    </div>
+                </div>
+                <div class="d-flex justify-content-end gap-4 mb-3 px-3">
+                    <button class="btn btn-sm border border-secondary"><i class="uil uil-edit"></i></button>
+                    <button class="btn btn-danger btn-sm"><i class="uil uil-trash"></i></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Js (header, sidebar, navbar Toggle) -->
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>
